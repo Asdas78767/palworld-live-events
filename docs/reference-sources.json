@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "project": "palworld-live-events",
+  "verifiedAt": "2026-07-17",
+  "target": {
+    "game": "Palworld",
+    "gameVersion": "1.0.1",
+    "platform": "steam-windows-dedicated-server",
+    "broadcastPlatform": "CHZZK"
+  },
+  "policy": {
+    "sourcePriority": [
+      "runtime-observation",
+      "official-endpoint-documentation",
+      "official-patch-notice",
+      "maintainer-release",
+      "version-pinned-project-snapshot",
+      "managed-community-documentation",
+      "unverified-community-content"
+    ],
+    "communitySourcesMayDefineProductionIds": false,
+    "searchSnippetsMayDefineApiContracts": false,
+    "reverifyMutableFactsPerRelatedChange": true,
+    "unknownFactsRemainUnverified": true
+  },
+  "sources": [
+    {
+      "id": "palworld-steam-community",
+      "name": "Palworld Steam Community",
+      "url": "https://steamcommunity.com/app/1623730",
+      "trust": "A0",
+      "topics": ["official-news", "patch-notes", "workshop"],
+      "use": "Confirm official Palworld patch announcements and Workshop metadata.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-steam-news",
+      "name": "Palworld Steam News",
+      "url": "https://store.steampowered.com/news/app/1623730",
+      "trust": "A0",
+      "topics": ["official-news", "patch-notes"],
+      "use": "Read the complete official patch note for the exact game version.",
+      "mutable": true
+    },
+    {
+      "id": "pocketpair-game-news",
+      "name": "Pocketpair Game News",
+      "url": "https://www.pocketpair.jp/game-news/",
+      "trust": "A0",
+      "topics": ["official-news"],
+      "use": "Confirm developer announcements and major release information.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-server-guide",
+      "name": "Palworld Server Guide",
+      "url": "https://docs.palworldgame.com/",
+      "trust": "A0",
+      "topics": ["dedicated-server", "configuration", "rest-api", "mods"],
+      "use": "Primary source for dedicated-server operation and official server APIs.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-server-configuration",
+      "name": "Palworld Server Configuration",
+      "url": "https://docs.palworldgame.com/settings-and-operation/configuration/",
+      "trust": "A0",
+      "topics": ["server-settings", "backup", "rest-api-enable"],
+      "use": "Validate PalWorldSettings.ini fields and operational settings.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-server-arguments",
+      "name": "Palworld Server Arguments",
+      "url": "https://docs.palworldgame.com/settings-and-operation/arguments/",
+      "trust": "A0",
+      "topics": ["server-startup", "command-line"],
+      "use": "Validate dedicated-server command-line arguments.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-server-mods",
+      "name": "Palworld Server Mods",
+      "url": "https://docs.palworldgame.com/settings-and-operation/mod/",
+      "trust": "A0",
+      "topics": ["server-mods", "workshop", "deployment"],
+      "use": "Validate official server-side mod installation and activation behavior.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-index",
+      "name": "Palworld REST API Index",
+      "url": "https://docs.palworldgame.com/category/rest-api/",
+      "trust": "A0",
+      "topics": ["rest-api", "index"],
+      "use": "Discover current official REST endpoints; verify each endpoint on its individual page.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-introduction",
+      "name": "Palworld REST API Introduction",
+      "url": "https://docs.palworldgame.com/api/rest-api/palwold-rest-api/",
+      "trust": "A0",
+      "topics": ["rest-api", "authentication", "network-security"],
+      "use": "Validate REST enablement, HTTP Basic Auth, and LAN-only exposure guidance.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-info",
+      "name": "Palworld REST Server Info",
+      "url": "https://docs.palworldgame.com/api/rest-api/info/",
+      "trust": "A0",
+      "topics": ["rest-api", "server-info"],
+      "use": "Validate GET /v1/api/info request and response.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-players",
+      "name": "Palworld REST Players",
+      "url": "https://docs.palworldgame.com/api/rest-api/players/",
+      "trust": "A0",
+      "topics": ["rest-api", "players"],
+      "use": "Validate GET /v1/api/players request and response.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-settings",
+      "name": "Palworld REST Settings",
+      "url": "https://docs.palworldgame.com/api/rest-api/settings/",
+      "trust": "A0",
+      "topics": ["rest-api", "server-settings"],
+      "use": "Validate read-only GET /v1/api/settings and its schema.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-metrics",
+      "name": "Palworld REST Metrics",
+      "url": "https://docs.palworldgame.com/api/rest-api/metrics/",
+      "trust": "A0",
+      "topics": ["rest-api", "metrics", "observability"],
+      "use": "Validate GET /v1/api/metrics request and response.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-announce",
+      "name": "Palworld REST Announce",
+      "url": "https://docs.palworldgame.com/api/rest-api/announce/",
+      "trust": "A0",
+      "topics": ["rest-api", "announcement"],
+      "use": "Validate POST /v1/api/announce.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-kick",
+      "name": "Palworld REST Kick",
+      "url": "https://docs.palworldgame.com/api/rest-api/kick/",
+      "trust": "A0",
+      "topics": ["rest-api", "player-administration"],
+      "use": "Validate POST /v1/api/kick; treat as destructive administration.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-ban",
+      "name": "Palworld REST Ban",
+      "url": "https://docs.palworldgame.com/api/rest-api/ban/",
+      "trust": "A0",
+      "topics": ["rest-api", "player-administration"],
+      "use": "Validate POST /v1/api/ban; never map directly from donation amount.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-unban",
+      "name": "Palworld REST Unban",
+      "url": "https://docs.palworldgame.com/api/rest-api/unban/",
+      "trust": "A0",
+      "topics": ["rest-api", "player-administration"],
+      "use": "Validate POST /v1/api/unban.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-save",
+      "name": "Palworld REST Save",
+      "url": "https://docs.palworldgame.com/api/rest-api/save/",
+      "trust": "A0",
+      "topics": ["rest-api", "save-data"],
+      "use": "Validate POST /v1/api/save before controlled shutdown or mod changes.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-shutdown",
+      "name": "Palworld REST Shutdown",
+      "url": "https://docs.palworldgame.com/api/rest-api/shutdown/",
+      "trust": "A0",
+      "topics": ["rest-api", "shutdown"],
+      "use": "Validate delayed graceful shutdown request and required body fields.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rest-stop",
+      "name": "Palworld REST Force Stop",
+      "url": "https://docs.palworldgame.com/api/rest-api/stop/",
+      "trust": "A0",
+      "topics": ["rest-api", "force-stop"],
+      "use": "Validate force stop; do not use as the default shutdown path.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-rcon",
+      "name": "Palworld RCON",
+      "url": "https://docs.palworldgame.com/api/rcon/",
+      "trust": "A0",
+      "topics": ["rcon", "deprecated"],
+      "use": "Confirm deprecation status; do not add new project functionality based on RCON.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-developers",
+      "name": "CHZZK Developers",
+      "url": "https://chzzk.gitbook.io/chzzk",
+      "trust": "A0",
+      "topics": ["chzzk", "open-api"],
+      "use": "Primary CHZZK Open API documentation root.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-authorization",
+      "name": "CHZZK Authorization",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/authorization",
+      "trust": "A0",
+      "topics": ["chzzk", "oauth", "tokens"],
+      "use": "Validate authorization code flow, state handling, and token refresh semantics.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-tips",
+      "name": "CHZZK API Tips",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/tips",
+      "trust": "A0",
+      "topics": ["chzzk", "api-guidance"],
+      "use": "Validate official API caveats and common integration rules.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-session",
+      "name": "CHZZK Session",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/session",
+      "trust": "A0",
+      "topics": ["chzzk", "session", "donation", "socket-io"],
+      "use": "Validate user-session creation, SYSTEM messages, DONATION subscription, payload fields, limits, and supported Socket.IO-client range.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-user",
+      "name": "CHZZK User",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/user",
+      "trust": "A0",
+      "topics": ["chzzk", "user"],
+      "use": "Validate user identity fields.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-channel",
+      "name": "CHZZK Channel",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/channel",
+      "trust": "A0",
+      "topics": ["chzzk", "channel"],
+      "use": "Validate stable channel identifiers and channel metadata.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-live",
+      "name": "CHZZK Live",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/live",
+      "trust": "A0",
+      "topics": ["chzzk", "live"],
+      "use": "Validate live broadcast state APIs when required by project logic.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-chat",
+      "name": "CHZZK Chat",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/chat",
+      "trust": "A0",
+      "topics": ["chzzk", "chat"],
+      "use": "Validate chat APIs; keep chat commands separate from donation payload execution.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-drops",
+      "name": "CHZZK Drops",
+      "url": "https://chzzk.gitbook.io/chzzk/chzzk-api/drops",
+      "trust": "A0",
+      "topics": ["chzzk", "drops"],
+      "use": "Use only for Drops features; do not substitute it for donation session events.",
+      "mutable": true
+    },
+    {
+      "id": "chzzk-drops-webhook",
+      "name": "CHZZK Drops Webhook",
+      "url": "https://chzzk.gitbook.io/chzzk/drops/webhook",
+      "trust": "A0",
+      "topics": ["chzzk", "drops", "webhook"],
+      "use": "Validate signature and replay protection only for Drops webhook integrations.",
+      "mutable": true
+    },
+    {
+      "id": "palschema",
+      "name": "PalSchema",
+      "url": "https://github.com/Okaetsu/PalSchema",
+      "trust": "A1",
+      "topics": ["palworld", "schema", "modding"],
+      "use": "Review maintained schemas and releases; pin tag or commit and test against the target server build.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-ue4ss-fork",
+      "name": "Palworld RE-UE4SS Fork",
+      "url": "https://github.com/Okaetsu/RE-UE4SS",
+      "trust": "A1",
+      "topics": ["palworld", "ue4ss", "modding"],
+      "use": "Review the Palworld-maintained fork and target-specific releases; record commit and artifact hashes.",
+      "mutable": true
+    },
+    {
+      "id": "ue4ss-upstream",
+      "name": "RE-UE4SS Upstream",
+      "url": "https://github.com/UE4SS-RE/RE-UE4SS",
+      "trust": "A1",
+      "topics": ["ue4ss", "modding"],
+      "use": "Use for upstream architecture and releases without assuming Palworld compatibility.",
+      "mutable": true
+    },
+    {
+      "id": "ue4ss-docs",
+      "name": "UE4SS Documentation",
+      "url": "https://docs.ue4ss.com/",
+      "trust": "A1",
+      "topics": ["ue4ss", "documentation"],
+      "use": "Validate UE4SS APIs for the exact pinned build.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-modding-wiki",
+      "name": "Palworld Modding Wiki",
+      "url": "https://pwmodding.wiki/",
+      "trust": "B",
+      "topics": ["palworld", "modding", "community"],
+      "use": "Use for discovery and troubleshooting candidates; cross-check with official documents and runtime tests.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-wikigg",
+      "name": "Palworld Wiki.gg",
+      "url": "https://palworld.wiki.gg/",
+      "trust": "B",
+      "topics": ["palworld", "items", "pals", "patch-history"],
+      "use": "Use for human-readable names and discovery; never treat display names as production internal IDs.",
+      "mutable": true
+    },
+    {
+      "id": "palworld-steam-workshop",
+      "name": "Palworld Steam Workshop",
+      "url": "https://steamcommunity.com/app/1623730/workshop/",
+      "trust": "B",
+      "topics": ["palworld", "workshop", "mods"],
+      "use": "Confirm publisher, Workshop ID, update time, and dependency candidates; inspect the package itself before deployment.",
+      "mutable": true
+    },
+    {
+      "id": "codex-docs",
+      "name": "OpenAI Codex Documentation",
+      "url": "https://developers.openai.com/codex/",
+      "trust": "A0",
+      "topics": ["codex"],
+      "use": "Validate current Codex behavior and configuration.",
+      "mutable": true
+    },
+    {
+      "id": "codex-agents-md",
+      "name": "Codex AGENTS.md Guide",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "trust": "A0",
+      "topics": ["codex", "agents-md"],
+      "use": "Validate repository and nested AGENTS.md behavior.",
+      "mutable": true
+    },
+    {
+      "id": "codex-cloud-environments",
+      "name": "Codex Cloud Environments",
+      "url": "https://developers.openai.com/codex/cloud/environments",
+      "trust": "A0",
+      "topics": ["codex", "cloud", "network"],
+      "use": "Validate setup scripts and internet-access restrictions for Codex Cloud.",
+      "mutable": true
+    },
+    {
+      "id": "nodejs-docs",
+      "name": "Node.js Documentation",
+      "url": "https://nodejs.org/docs/latest/api/",
+      "trust": "A0",
+      "topics": ["nodejs"],
+      "use": "Use documentation matching the runtime version pinned by the project.",
+      "mutable": true
+    },
+    {
+      "id": "typescript-docs",
+      "name": "TypeScript Documentation",
+      "url": "https://www.typescriptlang.org/docs/",
+      "trust": "A0",
+      "topics": ["typescript"],
+      "use": "Validate TypeScript behavior for the pinned compiler version.",
+      "mutable": true
+    },
+    {
+      "id": "socketio-docs",
+      "name": "Socket.IO Documentation",
+      "url": "https://socket.io/docs/",
+      "trust": "A1",
+      "topics": ["socket-io"],
+      "use": "Use only within the CHZZK-supported client-version range and verify old-version behavior.",
+      "mutable": true
+    },
+    {
+      "id": "npm-registry",
+      "name": "npm Registry",
+      "url": "https://registry.npmjs.org/",
+      "trust": "A1",
+      "topics": ["packages", "integrity", "versions"],
+      "use": "Inspect package versions and integrity metadata; do not install latest versions implicitly.",
+      "mutable": true
+    }
+  ]
+}
